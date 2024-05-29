@@ -1,0 +1,20 @@
+// 58. Length of Last Word
+
+class Solution {
+public:
+    int lengthOfLastWord(string s) {
+        int wordsize = 0;
+        int siz = s.size();
+        while(siz--) {
+            if(s[siz] != ' ') {
+                wordsize++;
+            } else {
+                if(wordsize == 0) {
+                    continue;
+                } 
+                break;
+            }
+        }
+        return wordsize;
+    }
+};
