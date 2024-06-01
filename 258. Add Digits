@@ -1,0 +1,22 @@
+// 258. Add Digits
+// https://leetcode.com/problems/add-digits/description/
+
+
+class Solution {
+public:
+    int addDigits(int num) {
+        if ( num < 10 ) {
+            return num;
+        }
+        int res = num, sum=0,n;
+        while (res > 9) {
+            sum = 0;
+            while (res > 9) {
+                n = (res % 10);
+                sum = sum + n;
+                res = num / 10;
+            }
+        }
+        return sum;
+    }
+};
