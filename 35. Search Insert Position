@@ -1,0 +1,20 @@
+// 35. Search Insert Position
+
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        int siz = nums.size();
+        int i = 0;
+        for(; i < siz; i++) {
+            if (nums[i] == target && nums[i] <= target ) {
+                return i;
+            } else if ( nums[i] <= target) {
+                continue;
+            } else {
+                return i;
+            }
+
+        }
+        return i;
+    }
+};
