@@ -1,5 +1,5 @@
 // 3069. Distribute Elements Into Two Arrays I
-
+// Distribute elements in to tow arrays part 
 
 class Solution {
 public:
