@@ -1,0 +1,6 @@
+class Solution:
+    def isMonotonic(self, nums: List[int]) -> bool:
+        ascen  = all(x <= y for x, y in pairwise(nums))
+        descen = all(x >= y for x, y in pairwise(nums))
+        return ascen or descen
+        
