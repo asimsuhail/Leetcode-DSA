@@ -1,4 +1,5 @@
-//https://leetcode.com/problems/monotonic-array/description/
+//   https://leetcode.com/problems/monotonic-array/description/
+
 class Solution:
     def isMonotonic(self, nums: List[int]) -> bool:
         ascen  = all(x <= y for x, y in pairwise(nums))
