@@ -1,0 +1,9 @@
+int hammingDistance(int x, int y) {
+        int hamming_distance = 0;
+        int xo_or = x ^ y;
+        while (xo_or != 0) {
+            hamming_distance++;
+            xo_or = xo_or & (xo_or - 1);
+        }
+        return hamming_distance;
+    }
