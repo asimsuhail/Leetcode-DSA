@@ -1,9 +1,9 @@
 int hammingDistance(int x, int y) {
         int hamming_distance = 0;
-        int xo_or = x ^ y;
+        int xo_or = x ^ y;         // calculate different bits
         while (xo_or != 0) {
             hamming_distance++;
-            xo_or = xo_or & (xo_or - 1);
+            xo_or = xo_or & (xo_or - 1);                // will remove differnce of bit by 1 like if 11 is answer then difference 
         }
         return hamming_distance;
     }
