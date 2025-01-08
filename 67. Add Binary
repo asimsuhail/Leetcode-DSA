@@ -1,0 +1,20 @@
+string addBinary(string a, string b) {
+        string res;
+        int i = a.length() - 1, j = b.length() - 1;
+        int carry = 0;
+        while (i >= 0 || j >= 0) {
+            int sumation = carry;
+            if (i >= 0) {
+                sumation += a[i--] - '0';
+            }
+            if (j >= 0) {
+                sumation += b[j--] - '0';
+            }
+            carry = sumation > 1 ? 1 : 0;
+            res = to_string(sumation % 2) + res;
+        }
+        if (carry) {
+            res = to_string(carry) + res;
+        }
+
+        return res;
