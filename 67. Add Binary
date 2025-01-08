@@ -1,3 +1,5 @@
+//  Given two binary strings a and b, return their sum as a binary string.
+
 string addBinary(string a, string b) {
         string res;
         int i = a.length() - 1, j = b.length() - 1;
