@@ -1,0 +1,26 @@
+/**
+ * @param {string} s
+ * @param {number} numRows
+ * @return {string}
+ */
+var convert = function(s, numRows) {
+
+    if (numRows === 1 || s.length <= numRows) return s;
+
+    const rows = new Array(numRows).fill('');
+    let cr = 0;
+    let goingDown = false;
+
+    for (let char of s) {
+        rows[cr] += char;
+
+        if (cr === 0 || cr === numRows - 1) {
+            goingDown = !goingDown;
+        }
+
+        cr += goingDown ? 1 : -1;
+    }
+
+    return rows.join('');
+
+};
