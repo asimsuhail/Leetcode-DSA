@@ -1,4 +1,4 @@
-// Regular expression matching
+// Regular expression matching problem
 
 class Solution:
     def isMatch(self, s: str, p: str) -> bool:
